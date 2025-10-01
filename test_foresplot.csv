@@ -1,0 +1,46 @@
+Adverse Event,Treatment Group,Incidence Rate,Lower CI,Upper CI
+Death,Drug A 5mg,0.45,0.32,0.58
+Death,Drug A 10mg,0.67,0.51,0.83
+Death,Drug B,0.52,0.38,0.66
+Serious Infections,Drug A 5mg,1.25,0.98,1.52
+Serious Infections,Drug A 10mg,1.74,1.42,2.06
+Serious Infections,Drug B,1.45,1.18,1.72
+Herpes Zoster,Drug A 5mg,2.08,1.65,2.51
+Herpes Zoster,Drug A 10mg,3.55,3.02,4.08
+Herpes Zoster,Drug B,2.85,2.35,3.35
+Opportunistic Infections,Drug A 5mg,0.62,0.35,0.89
+Opportunistic Infections,Drug A 10mg,0.72,0.48,0.96
+Opportunistic Infections,Drug B,0.68,0.42,0.94
+Cancers (excluding NMSC),Drug A 5mg,1.25,0.87,1.63
+Cancers (excluding NMSC),Drug A 10mg,1.03,0.71,1.35
+Cancers (excluding NMSC),Drug B,1.15,0.82,1.48
+NMSC,Drug A 5mg,0.93,0.58,1.28
+NMSC,Drug A 10mg,0.85,0.53,1.17
+NMSC,Drug B,0.89,0.56,1.22
+MACE,Drug A 5mg,0.31,0.12,0.50
+MACE,Drug A 10mg,0.48,0.28,0.68
+MACE,Drug B,0.39,0.19,0.59
+GI Perforation,Drug A 5mg,0.16,0.03,0.29
+GI Perforation,Drug A 10mg,0.22,0.08,0.36
+GI Perforation,Drug B,0.19,0.06,0.32
+Deep Vein Thrombosis,Drug A 5mg,0.28,0.11,0.45
+Deep Vein Thrombosis,Drug A 10mg,0.42,0.23,0.61
+Deep Vein Thrombosis,Drug B,0.35,0.17,0.53
+Pulmonary Embolism,Drug A 5mg,0.18,0.05,0.31
+Pulmonary Embolism,Drug A 10mg,0.35,0.19,0.51
+Pulmonary Embolism,Drug B,0.26,0.11,0.41
+Cardiovascular Events,Drug A 5mg,0.82,0.56,1.08
+Cardiovascular Events,Drug A 10mg,1.15,0.85,1.45
+Cardiovascular Events,Drug B,0.98,0.71,1.25
+Hepatic Disorders,Drug A 5mg,0.45,0.22,0.68
+Hepatic Disorders,Drug A 10mg,0.58,0.34,0.82
+Hepatic Disorders,Drug B,0.51,0.28,0.74
+Renal Impairment,Drug A 5mg,0.38,0.17,0.59
+Renal Impairment,Drug A 10mg,0.52,0.29,0.75
+Renal Impairment,Drug B,0.45,0.23,0.67
+Severe Anemia,Drug A 5mg,0.72,0.45,0.99
+Severe Anemia,Drug A 10mg,0.95,0.66,1.24
+Severe Anemia,Drug B,0.83,0.55,1.11
+Neutropenia,Drug A 5mg,1.18,0.84,1.52
+Neutropenia,Drug A 10mg,1.65,1.28,2.02
+Neutropenia,Drug B,1.42,1.08,1.76
