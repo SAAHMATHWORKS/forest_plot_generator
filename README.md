@@ -18,7 +18,7 @@ Une application web interactive pour générer des Forest Plots professionnels �
 
 ## 🚀 Démo en ligne
 
-[Lien vers votre application Streamlit Cloud]
+[Lien vers l'application Streamlit Cloud](https://forestplotgenerator.streamlit.app/)
 
 ## 📋 Prérequis
 
@@ -60,7 +60,6 @@ streamlit run forest_plot.py
 ```
 http://localhost:8501
 
-https://forestplotgenerator.streamlit.app/
 ```
 
 ## 📦 Dépendances
