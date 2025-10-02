@@ -17,7 +17,7 @@ Cancers (excluding NMSC),Drug B,1.15,0.82,1.48
 NMSC,Drug A 5mg,0.93,0.58,1.28
 NMSC,Drug A 10mg,0.85,0.53,1.17
 NMSC,Drug B,0.89,0.56,1.22
-MACE,Drug A 5mg,0.31,0.12,0.50
+MACE,Drug A 5mg,0.31,0.12,0.5
 MACE,Drug A 10mg,0.48,0.28,0.68
 MACE,Drug B,0.39,0.19,0.59
 GI Perforation,Drug A 5mg,0.16,0.03,0.29

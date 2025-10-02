@@ -108,6 +108,29 @@ st.markdown('</div>', unsafe_allow_html=True)
 # Stop if no data
 if st.session_state.df is None:
     st.info("👆 Veuillez uploader un fichier pour commencer")
+    with st.expander("ℹ️ Guide d'utilisation et interprétation"):
+        st.markdown("""
+        ### 📖 Comment utiliser cet outil ?
+        
+        1. **Importez vos données** : Fichier CSV ou Excel avec au minimum 5 colonnes
+        2. **Configurez les colonnes** : Associez chaque colonne à sa variable (catégorie, groupe, TI, IC95_min, IC95_max)
+        3. **Personnalisez** : Utilisez les filtres et options dans la barre latérale
+        4. **Exportez** : Téléchargez votre graphique en HTML, PNG ou SVG
+        
+        ### 📊 Interprétation du Forest Plot
+        
+        - **Points** : Représentent le taux d'incidence (TI)
+        - **Barres horizontales** : Intervalles de confiance à 95%
+        - **Ligne verticale** : Valeur de référence (généralement 1.0)
+        - **Zone verte** : TI < référence (effet favorable)
+        - **Zone rouge** : TI > référence (effet défavorable)
+        
+        ### 💡 Conseils
+        
+        - Plus l'intervalle de confiance est étroit, plus l'estimation est précise
+        - Un IC95 qui ne croise pas la ligne de référence indique une différence statistiquement significative
+        - Comparez les groupes pour identifier les tendances et différences
+        """)
     st.stop()
 
 df_raw = st.session_state.df
@@ -465,27 +488,51 @@ if len(selected_groups) > 0 and len(selected_categories) > 0:
         st.plotly_chart(fig, use_container_width=True)
         
         # Download options
+        # Download options
         st.markdown("### 💾 Téléchargement")
-        col1, col2, col3 = st.columns(3)
-        
+
+        col1, col2 = st.columns(2)
+
         with col1:
-            if st.button("📥 Télécharger HTML", type="primary", use_container_width=True):
-                fig.write_html("forest_plot.html")
-                st.success("✅ Sauvegardé : forest_plot.html")
-        
+            # Download HTML
+            html_buffer = fig.to_html(include_plotlyjs='cdn')
+            st.download_button(
+                label="📥 Télécharger HTML",
+                data=html_buffer,
+                file_name="forest_plot.html",
+                mime="text/html",
+                type="primary",
+                use_container_width=True
+            )
+
         with col2:
-            if st.button("📥 Télécharger PNG", use_container_width=True):
-                fig.write_image("forest_plot.png", width=plot_width, height=plot_height, scale=2)
-                st.success("✅ Sauvegardé : forest_plot.png")
-        
-        with col3:
-            if st.button("📥 Télécharger SVG", use_container_width=True):
-                fig.write_image("forest_plot.svg", width=plot_width, height=plot_height)
-                st.success("✅ Sauvegardé : forest_plot.svg")
+            # Download as interactive HTML with instructions
+            st.info("💡 Astuce : Utilisez le bouton 📷 en haut à droite du graphique pour télécharger en PNG")
+
+        # Optional: Add a note about image export
+        with st.expander("ℹ️ Comment exporter en PNG/SVG ?"):
+            st.markdown("""
+            **Option 1 : Export interactif (recommandé)**
+            1. Passez votre souris sur le graphique
+            2. Cliquez sur l'icône 📷 (caméra) en haut à droite
+            3. Sélectionnez "Download plot as png"
+            
+            **Option 2 : Screenshot**
+            - Utilisez l'outil de capture d'écran de votre système
+            
+            **Option 3 : Export HTML puis conversion**
+            - Téléchargez le fichier HTML
+            - Ouvrez-le dans un navigateur
+            - Utilisez le bouton 📷 pour exporter en PNG
+            """)
     else:
         st.warning("⚠️ Impossible de générer le graphique")
 else:
     st.warning("⚠️ Veuillez sélectionner au moins une catégorie et un groupe")
+
+# download
+
+
 
 # Data table
 st.markdown("---")
