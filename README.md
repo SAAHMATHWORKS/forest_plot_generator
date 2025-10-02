@@ -189,14 +189,14 @@ Les contributions sont les bienvenues ! Pour contribuer :
 
 ## 📝 Licence
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+    RAS.
 
 ## 👤 Auteur
 
 **Thibaut SAAH**
 
-- GitHub: [@votre-username](https://github.com/SAAHMATHWORKS)
-- LinkedIn: [Votre profil](https://www.linkedin.com/in/thibaut-saah) 
+- GitHub: [SAAHMATHWORKS](https://github.com/SAAHMATHWORKS)
+- LinkedIn: [thibaut-saah](https://www.linkedin.com/in/thibaut-saah) 
 
 ## 🙏 Remerciements
 
